@@ -1,0 +1,247 @@
+
+/* color for reuseing same put in root */
+:root{
+  --bg-color: #FFF8C9;
+--btn-bg-color: #CD5C08;
+--text-color: #232D3F;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* second navbar */
+a{
+  text-decoration: none;
+}
+.menu{
+  width: 70%;
+  margin: auto;
+  background-color: #232D3F;
+}
+.menuitem{
+  float: right;
+  position: relative;
+  padding: 15px 25px;
+}
+.clear{
+  clear: both;
+}
+.submenu{
+  z-index: 1;
+  width: 120px;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  display: none;
+}
+.menuitem:hover{
+border-bottom: 1px solid var(--text-color);
+}
+.menuitem:hover .submenu{
+  display:block;
+}
+
+.submenuitems{
+  color: blue;
+  padding-top: 4px 0px;
+}
+/* middle */
+h2{
+  margin: 7% 2% 2% 7%;
+}
+.para{
+  color: blue;
+  letter-spacing: 2px;
+  margin: 1% 2% 2% 7%;
+}
+.row{
+  margin: 70px auto;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+i {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/**
+* ! Navbar STyles are here
+**/
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #212529;
+  color: white;
+  padding: 2px 60px;
+  margin-bottom: 3px;
+}
+
+.cart {
+  position: relative;
+  background-color: #fff;
+  color: #212529;
+  font-size: 30px;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.cartAmount {
+  position: absolute;
+  top: -15px;
+  right: -10px;
+  font-size: 16px;
+  background-color: red;
+  color: white;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+/**
+* ! Shop items styles are here
+**/
+/* in full screen the cart will be in group of 4 in one column with the size of 223px here by jstify content cetre the all cart palced in center  */
+.shop {
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 223px);
+  gap: 30px;
+  justify-content: center;
+}
+/* i used media qurey here for make it responsive if sceen size is 1000px the div or cart will divide into pair an d if sceen size is 500px the cart will divide into single */
+@media (max-width: 1000px) {
+  .shop {
+    grid-template-columns: repeat(2, 223px);
+  }
+}
+
+@media (max-width: 500px) {
+  .shop {
+    grid-template-columns: repeat(1, 223px);
+  }
+}
+
+.item {
+  border: 2px solid #212529;
+  border-radius: 4px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+}
+ 
+  /* i used short form like jcsb for justify-content: space-between, aic for align-items: center, df for display: flex etc */
+.price-quantity {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+/* buttons by default font size is 16px */
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  font-size: 26px;
+}
+/* making adding icon to red color and minus icon to green color */
+.bi-dash-lg {
+  color: red;
+}
+
+.bi-plus-lg {
+  color: green;
+}
+
+/**
+*  style rules for label and some buttons
+**/
+
+.text-center {
+  /* text-align: center; */
+  margin-bottom: 10px;
+}
+
+.HomeBtn,
+.checkout,  
+.removeAll {
+  background-color: #212529;
+  color: white;
+  border: none;
+  padding: 6px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.checkout {
+  background-color: green;
+}
+.removeAll {
+  background-color: red;
+}
+.bi-x-lg {
+  color: red;
+  font-weight: bold;
+}
+
+/**
+* ! style rules for shopping-cart
+**/
+
+.shopping-cart {
+  display: grid;
+  grid-template-columns: repeat(1, 350px);
+  justify-content: center;
+  gap: 15px;
+  margin: 20px auto;
+  width: 100%;
+}
+
+/**
+* ! style rules for cart-item
+**/
+
+.cart-item {
+  border: 2px solid #212529;
+  border-radius: 5px;
+  display: flex;
+}
+
+.title-price-x {
+  width: 195px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 2px solid red; */
+}
+
+.title-price {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.cart-item-price {
+  background-color: #212529;
+  color: white;
+  border-radius: 4px;
+  padding: 3px 8px;
+}
+
+/* i used curson pointer for cart icon  */
